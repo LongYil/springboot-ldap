@@ -1,19 +1,17 @@
 package com.xiaozhuge.springbootldap.controller;
 
-import java.util.List;
-
 import com.xiaozhuge.springbootldap.domain.NormalUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ldap.core.AttributesMapper;
 import org.springframework.ldap.core.DirContextAdapter;
 import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.ldap.support.LdapNameBuilder;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.naming.Name;
+import java.util.List;
 
 @RestController
 public class HelloController {

@@ -29,7 +29,7 @@ public class SecurityConfig {
     @Bean
     BindAuthenticator authenticator(BaseLdapPathContextSource contextSource) {
         BindAuthenticator authenticator = new BindAuthenticator(contextSource);
-        authenticator.setUserDnPatterns(new String[] { "uid={0},ou=people" });
+        authenticator.setUserDnPatterns(new String[]{"uid={0},ou=people"});
         return authenticator;
     }
 
