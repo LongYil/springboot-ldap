@@ -2,3 +2,5 @@ server:
   port: 8081
 
 
+system:
+  usercenter: skyview
