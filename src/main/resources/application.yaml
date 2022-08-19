@@ -4,3 +4,9 @@ server:
 
 system:
   usercenter: skyview
+
+spring:
+  redis:
+    password: ArKRGfNmA7  #密码
+    host: 10.10.102.52
+    port: 31987

@@ -1,12 +1,15 @@
 package com.xiaozhuge.springbootldap.controller;
 
 import com.xiaozhuge.springbootldap.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.redis.core.BoundSetOperations;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+import java.io.Serializable;
 
 
 /**
@@ -17,12 +20,17 @@ import javax.annotation.Resource;
 @RestController
 public class UserController {
 
-    @Qualifier
-    @Resource(name=  "${system.usercenter}UserServiceImpl")
+    @Autowired
     private UserService userService;
+    @Autowired
+    private RedisTemplate<String, Serializable> redisTemplate;
 
     @GetMapping("/login")
     public String login(){
+
+        BoundSetOperations<String, Serializable> user = (BoundSetOperations<String, Serializable>) redisTemplate.boundValueOps("user");
+        user.add("hahah");
+
         return userService.login();
     }
 
