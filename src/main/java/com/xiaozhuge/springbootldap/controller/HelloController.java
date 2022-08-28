@@ -1,14 +1,13 @@
 package com.xiaozhuge.springbootldap.controller;
 
 import com.xiaozhuge.springbootldap.domain.NormalUser;
+import com.xiaozhuge.springbootldap.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ldap.core.AttributesMapper;
 import org.springframework.ldap.core.DirContextAdapter;
 import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.ldap.support.LdapNameBuilder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.naming.Name;
 import java.util.List;
@@ -18,6 +17,12 @@ public class HelloController {
 
     @Autowired
     LdapTemplate ldap;
+
+    @PostMapping("/test")
+    public String test(@RequestBody Person person){
+        System.out.println(person);
+        return "success";
+    }
 
     @GetMapping
     public String hello() {

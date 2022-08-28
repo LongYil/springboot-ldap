@@ -10,10 +10,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class SemTest {
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver","/Users/liyinlong/chromedriver");
-        ChromeOptions options = new ChromeOptions();
-        ChromeDriver chromeDriver = new ChromeDriver(options);
-        chromeDriver.quit();
 
     }
 }
