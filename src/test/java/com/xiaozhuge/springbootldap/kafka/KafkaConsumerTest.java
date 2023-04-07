@@ -19,7 +19,7 @@ public class KafkaConsumerTest implements Runnable {
     public KafkaConsumerTest(String topicName,String clientid) {
  
         Properties props = new Properties();
-        props.put("bootstrap.servers", "10.18.2.78:30027,10.18.2.78:30043,10.18.2.78:30068");
+        props.put("bootstrap.servers", "10.10.102.211:30004,10.10.102.211:30005,10.10.102.211:30006");
         props.put("group.id", GROUPID);
         props.put("enable.auto.commit", "true");
         props.put("auto.commit.interval.ms", "1000");

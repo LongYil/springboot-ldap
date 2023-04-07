@@ -13,7 +13,7 @@ public class KafkaProducerTest implements Runnable {
     private String clientid;
     public KafkaProducerTest(String topicName,String clientid) {
         Properties props = new Properties();
-        props.put("bootstrap.servers", "10.18.2.78:30027,10.18.2.78:30043,10.18.2.78:30068");
+        props.put("bootstrap.servers", "10.10.102.211:30004,10.10.102.211:30005,10.10.102.211:30006");
         props.put("acks", "all");
         props.put("retries", 0);
         props.put("batch.size", 16384);
