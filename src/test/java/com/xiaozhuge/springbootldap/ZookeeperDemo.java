@@ -6,13 +6,14 @@ public class ZookeeperDemo {
  
     public static void main(String[] args) throws Exception {
         BaseZookeeper zookeeper = new BaseZookeeper();
-        zookeeper.connectZookeeper("10.10.101.140:31217");
+        zookeeper.connectZookeeper("10.10.102.52:30851");
 
-        zookeeper.createNode("/ikafka7", "abc");
+        for (int i=0;i < 1000000; i++){
+            zookeeper.createNode("/ikafka9"+i, "abc");
+        }
 
         List<String> children = zookeeper.getChildren("/");
         System.out.println(children);
-
     }
  
 }

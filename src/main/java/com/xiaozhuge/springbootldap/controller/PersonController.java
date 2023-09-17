@@ -26,7 +26,7 @@ import java.util.List;
  *
  * @author Mattias Hellborg Arthursson
  */
-@RestController
+@RestController("/person")
 public class PersonController {
 
     @Autowired

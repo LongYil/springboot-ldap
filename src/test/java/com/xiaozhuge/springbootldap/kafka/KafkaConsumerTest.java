@@ -6,8 +6,10 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
- 
- 
+
+/**
+ * 消费消息
+ */
 public class KafkaConsumerTest implements Runnable {
  
     private final KafkaConsumer<String, String> consumer;
@@ -19,7 +21,7 @@ public class KafkaConsumerTest implements Runnable {
     public KafkaConsumerTest(String topicName,String clientid) {
  
         Properties props = new Properties();
-        props.put("bootstrap.servers", "10.10.102.211:30004,10.10.102.211:30005,10.10.102.211:30006");
+        props.put("bootstrap.servers", "10.10.95.252:33993,10.10.95.252:33992,10.10.95.252:33991");
         props.put("group.id", GROUPID);
         props.put("enable.auto.commit", "true");
         props.put("auto.commit.interval.ms", "1000");

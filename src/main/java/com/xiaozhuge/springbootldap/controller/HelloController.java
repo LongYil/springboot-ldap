@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.naming.Name;
 import java.util.List;
 
-@RestController
+@RestController("/hello")
 public class HelloController {
 
     @Autowired

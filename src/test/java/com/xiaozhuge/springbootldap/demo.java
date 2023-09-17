@@ -8,7 +8,9 @@ public class demo {
 
     public static void main(String[] args) {
 
-        System.out.println(getPasswordRemindCode(29.9));
+        String image = "https://www.haro.com:998/middleware/zeus:v1.3.3";
+        System.out.println(image.substring(image.lastIndexOf(":")));;
+
     }
 
     public static void check(Object id){

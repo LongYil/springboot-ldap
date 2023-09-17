@@ -33,7 +33,7 @@ public class RocketMqConsumerDemo {
             // 设置最大重试次数，默认是16次
             consumer.setMaxReconsumeTimes(5);
             // 设置consumer所订阅的Topic和Tag，*代表全部的Tag
-            consumer.subscribe("test", "*");
+            consumer.subscribe("ccc", "*");
             // Listener，主要进行消息的逻辑处理,监听topic，如果有消息就会立即去消费
 
             AtomicInteger all = new AtomicInteger(0);
